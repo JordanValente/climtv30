@@ -116,11 +116,74 @@ metrics.forEach(m => counterObserver.observe(m));
 
 // ═══════════════ Parallax léger sur le hero visual ═══════════════
 const heroVisual = document.querySelector('.hero-visual');
-if (heroVisual && window.matchMedia('(min-width: 900px)').matches) {
+if (heroVisual && window.matchMedia('(min-width: 960px)').matches) {
     window.addEventListener('scroll', () => {
         const y = window.scrollY;
         if (y < 800) {
-            heroVisual.style.transform = `translateY(${y * 0.08}px)`;
+            heroVisual.style.transform = `translateY(${y * 0.06}px)`;
         }
     }, { passive: true });
 }
+
+// ═══════════════ Filtres modèles ═══════════════
+const modelTabs = document.querySelectorAll('.model-tab');
+const modelCards = document.querySelectorAll('.model-card');
+
+modelTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+        const filter = tab.dataset.filter;
+        modelTabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        modelCards.forEach(card => {
+            const matches = filter === 'all' || card.dataset.cat === filter;
+            card.classList.toggle('hidden', !matches);
+        });
+    });
+});
+
+// ═══════════════ Lightbox pour les chantiers ═══════════════
+const chantierImgs = Array.from(document.querySelectorAll('.chantier-item img'));
+const lightbox = document.getElementById('lightbox');
+const lbImage = document.getElementById('lbImage');
+const lbCounter = document.getElementById('lbCounter');
+const lbClose = document.getElementById('lbClose');
+const lbPrev = document.getElementById('lbPrev');
+const lbNext = document.getElementById('lbNext');
+let currentIdx = 0;
+
+const showImage = (i) => {
+    if (!chantierImgs.length) return;
+    currentIdx = (i + chantierImgs.length) % chantierImgs.length;
+    lbImage.src = chantierImgs[currentIdx].src;
+    lbImage.alt = chantierImgs[currentIdx].alt;
+    lbCounter.textContent = `${currentIdx + 1} / ${chantierImgs.length}`;
+};
+
+const openLightbox = (i) => {
+    showImage(i);
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+};
+
+const closeLightbox = () => {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+};
+
+chantierImgs.forEach((img, i) => {
+    img.addEventListener('click', () => openLightbox(i));
+});
+
+if (lbClose) lbClose.addEventListener('click', closeLightbox);
+if (lbPrev) lbPrev.addEventListener('click', () => showImage(currentIdx - 1));
+if (lbNext) lbNext.addEventListener('click', () => showImage(currentIdx + 1));
+if (lightbox) lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') showImage(currentIdx - 1);
+    if (e.key === 'ArrowRight') showImage(currentIdx + 1);
+});

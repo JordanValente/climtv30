@@ -35,8 +35,8 @@
         <nav class="nav-menu" id="navMenu">
             <a href="#accueil">Accueil</a>
             <a href="#services">Services</a>
-            <a href="#processus">Processus</a>
-            <a href="#marques">Marques</a>
+            <a href="#modeles">Modèles</a>
+            <a href="#chantiers">Chantiers</a>
             <a href="#zones">Zones</a>
             <a href="#avis">Avis</a>
             <a href="#contact">Contact</a>
@@ -325,24 +325,186 @@
     </div>
 </section>
 
-<!-- ═══════════════ RÉALISATIONS / GALERIE ═══════════════ -->
-<section class="gallery">
+<!-- ═══════════════ MODÈLES / RÉALISATIONS ═══════════════ -->
+<section id="modeles" class="models">
     <div class="container">
         <div class="section-head">
-            <span class="eyebrow">Réalisations</span>
-            <h2 class="section-title">Des installations <em>soignées</em> et discrètes</h2>
-            <p class="section-lead">Chaque projet est unique : maisons anciennes, constructions modernes, locaux professionnels. Nous adaptons la pose à l'esthétique de votre lieu.</p>
+            <span class="eyebrow">Nos modèles & réalisations</span>
+            <h2 class="section-title">Une gamme <em>complète</em> pour tous les intérieurs</h2>
+            <p class="section-lead">Blanc, noir, gris, beige ou rouge : plus de 12 modèles disponibles pour s'adapter à tous les styles. Survolez chaque carte pour voir le rendu une fois installé.</p>
         </div>
-        <div class="gallery-grid">
-            <div class="gallery-item"><img src="images/clim-installee.jpg" alt="Installation salon" loading="lazy"></div>
-            <div class="gallery-item"><img src="images/clim-noir.jpg" alt="Climatisation noire design" loading="lazy"></div>
-            <div class="gallery-item"><img src="images/clim-salon.webp" alt="Salon climatisé" loading="lazy"></div>
-            <div class="gallery-item"><img src="images/clim-hero.webp" alt="Climatisation blanche" loading="lazy"></div>
-            <div class="gallery-item"><img src="images/clim-hr.jpg" alt="Installation HR" loading="lazy"></div>
-            <div class="gallery-item"><img src="images/clim-ft.jpg" alt="Installation FT" loading="lazy"></div>
+
+        <div class="models-tabs" id="modelsTabs">
+            <button class="model-tab active" data-filter="all">Tous</button>
+            <button class="model-tab" data-filter="blanc">Blanc</button>
+            <button class="model-tab" data-filter="noir">Noir</button>
+            <button class="model-tab" data-filter="couleur">Couleurs</button>
+        </div>
+
+        <div class="models-grid">
+            <article class="model-card" data-cat="blanc">
+                <div class="model-flip">
+                    <img class="model-front" src="images/models/ay-installee.webp" alt="AY installée" loading="lazy">
+                    <img class="model-back" src="images/models/ay-produit.webp" alt="AY produit" loading="lazy">
+                </div>
+                <div class="model-info"><span class="model-name">AY</span><span class="model-color">Blanc</span></div>
+            </article>
+
+            <article class="model-card" data-cat="blanc">
+                <div class="model-flip">
+                    <img class="model-front" src="images/models/ef-blanc-installee.webp" alt="EF Blanc installée" loading="lazy">
+                    <img class="model-back" src="images/models/ef-blanc-produit.webp" alt="EF Blanc produit" loading="lazy">
+                </div>
+                <div class="model-info"><span class="model-name">EF</span><span class="model-color">Blanc</span></div>
+            </article>
+
+            <article class="model-card" data-cat="noir">
+                <div class="model-flip">
+                    <img class="model-front" src="images/models/ef-noir-installee.jpg" alt="EF Noir installée" loading="lazy">
+                    <img class="model-back" src="images/models/ef-noir-produit.webp" alt="EF Noir produit" loading="lazy">
+                </div>
+                <div class="model-info"><span class="model-name">EF</span><span class="model-color">Noir</span></div>
+            </article>
+
+            <article class="model-card" data-cat="couleur">
+                <div class="model-flip">
+                    <img class="model-front" src="images/models/ef-gris-installee.jpg" alt="EF Gris installée" loading="lazy">
+                    <img class="model-back" src="images/models/ef-gris-produit.webp" alt="EF Gris produit" loading="lazy">
+                </div>
+                <div class="model-info"><span class="model-name">EF</span><span class="model-color">Gris</span></div>
+            </article>
+
+            <article class="model-card" data-cat="blanc">
+                <div class="model-flip">
+                    <img class="model-front" src="images/models/ft-installee.jpg" alt="FT installée" loading="lazy">
+                    <img class="model-back" src="images/models/ft-produit.webp" alt="FT produit" loading="lazy">
+                </div>
+                <div class="model-info"><span class="model-name">FT</span><span class="model-color">Blanc</span></div>
+            </article>
+
+            <article class="model-card" data-cat="blanc">
+                <div class="model-flip">
+                    <img class="model-front" src="images/models/hr-installee.jpg" alt="HR installée" loading="lazy">
+                    <img class="model-back" src="images/models/hr-produit.webp" alt="HR produit" loading="lazy">
+                </div>
+                <div class="model-info"><span class="model-name">HR</span><span class="model-color">Blanc</span></div>
+            </article>
+
+            <article class="model-card" data-cat="blanc">
+                <div class="model-flip">
+                    <img class="model-front" src="images/models/kt-produit.webp" alt="KT" loading="lazy">
+                    <img class="model-back" src="images/models/kt-produit.webp" alt="KT" loading="lazy">
+                </div>
+                <div class="model-info"><span class="model-name">KT</span><span class="model-color">Blanc</span></div>
+            </article>
+
+            <article class="model-card" data-cat="blanc">
+                <div class="model-flip">
+                    <img class="model-front" src="images/models/ln-blanc-installee.jpg" alt="LN Blanc installée" loading="lazy">
+                    <img class="model-back" src="images/models/ln-blanc-produit.webp" alt="LN Blanc produit" loading="lazy">
+                </div>
+                <div class="model-info"><span class="model-name">LN</span><span class="model-color">Blanc</span></div>
+            </article>
+
+            <article class="model-card" data-cat="noir">
+                <div class="model-flip">
+                    <img class="model-front" src="images/models/ln-noir-installee.jpg" alt="LN Noir installée" loading="lazy">
+                    <img class="model-back" src="images/models/ln-noir-produit.webp" alt="LN Noir produit" loading="lazy">
+                </div>
+                <div class="model-info"><span class="model-name">LN</span><span class="model-color">Noir</span></div>
+            </article>
+
+            <article class="model-card" data-cat="couleur">
+                <div class="model-flip">
+                    <img class="model-front" src="images/models/ln-beige-installee.jpg" alt="LN Beige installée" loading="lazy">
+                    <img class="model-back" src="images/models/ln-beige-produit.webp" alt="LN Beige produit" loading="lazy">
+                </div>
+                <div class="model-info"><span class="model-name">LN</span><span class="model-color">Beige</span></div>
+            </article>
+
+            <article class="model-card" data-cat="couleur">
+                <div class="model-flip">
+                    <img class="model-front" src="images/models/ln-rouge-installee.jpg" alt="LN Rouge installée" loading="lazy">
+                    <img class="model-back" src="images/models/ln-rouge-produit.webp" alt="LN Rouge produit" loading="lazy">
+                </div>
+                <div class="model-info"><span class="model-name">LN</span><span class="model-color">Rouge</span></div>
+            </article>
+
+            <article class="model-card" data-cat="blanc">
+                <div class="model-flip">
+                    <img class="model-front" src="images/models/rw-installee.jpg" alt="RW installée" loading="lazy">
+                    <img class="model-back" src="images/models/rw-produit.webp" alt="RW produit" loading="lazy">
+                </div>
+                <div class="model-info"><span class="model-name">RW</span><span class="model-color">Blanc</span></div>
+            </article>
         </div>
     </div>
 </section>
+
+<!-- ═══════════════ CHANTIERS ═══════════════ -->
+<section id="chantiers" class="chantiers">
+    <div class="container">
+        <div class="section-head">
+            <span class="eyebrow">Nos chantiers</span>
+            <h2 class="section-title">Le <em>terrain</em>, notre meilleure vitrine</h2>
+            <p class="section-lead">Photos prises sur nos chantiers réels : unités extérieures, réseaux gainables, poses en toiture, câblages soignés. Cliquez sur une photo pour l'agrandir.</p>
+        </div>
+        <div class="chantiers-grid">
+            <figure class="chantier-item"><img src="images/1.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/2.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/3.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/4.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/5.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/6.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/7.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/8.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/9.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/10.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/11.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/12.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/13.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/14.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/15.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/16.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/17.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/18.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/19.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/20.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/21.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/22.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/23.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/24.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/25.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/27.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/28.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/29.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/30.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/33.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/34.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/35.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/36.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/37.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/38.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/39.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/40.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/41.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/42.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/43.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+            <figure class="chantier-item"><img src="images/unnamed.jpg" alt="Chantier CLIM & TV30" loading="lazy"></figure>
+        </div>
+    </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lbClose" aria-label="Fermer">×</button>
+    <button class="lightbox-nav lightbox-prev" id="lbPrev" aria-label="Précédent">‹</button>
+    <button class="lightbox-nav lightbox-next" id="lbNext" aria-label="Suivant">›</button>
+    <div class="lightbox-content">
+        <img id="lbImage" src="" alt="">
+        <div class="lightbox-counter" id="lbCounter"></div>
+    </div>
+</div>
 
 <!-- ═══════════════ MARQUES ═══════════════ -->
 <section id="marques" class="brands">
@@ -404,12 +566,12 @@
             </div>
             <div class="zones-map">
                 <iframe
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=3.55%2C43.75%2C4.10%2C44.05&layer=mapnik&marker=43.9670%2C3.8590"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=3.45%2C43.75%2C4.20%2C44.10&amp;layer=mapnik&amp;marker=43.9670%2C3.8590"
                     loading="lazy"
                     title="Carte de la zone d'intervention"></iframe>
-                <div class="zones-map-pin">
-                    <div class="pin-dot"></div>
-                    <div class="pin-label">Saint-Hippolyte-du-Fort</div>
+                <div class="map-legend">
+                    <div class="map-legend-dot"></div>
+                    Saint-Hippolyte-du-Fort · 30170
                 </div>
             </div>
         </div>
