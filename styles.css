@@ -199,9 +199,9 @@ h1,h2,h3,h4,h5,h6{font-family:'Space Grotesk','Inter',sans-serif;line-height:1.1
 .service-card-main::before{background:var(--gradient-cool)}
 .service-card-main .service-icon{background:rgba(14,165,233,.15);color:#22D3EE}
 .service-card-main .service-content{padding:48px}
-.service-card-main h3{color:#fff;font-size:1.65rem}
-.service-card-main p{color:rgba(255,255,255,.75)}
-.service-card-main .service-features li{color:rgba(255,255,255,.85)}
+.service-card-main .service-content h3{color:#fff;font-size:1.65rem}
+.service-card-main .service-content p{color:rgba(255,255,255,.92)}
+.service-card-main .service-features li{color:#fff}
 .service-card-main .service-features li::before{background:var(--gradient-cool)}
 .service-visual{position:relative;min-height:360px;overflow:hidden}
 .service-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
