@@ -584,11 +584,11 @@
         <div class="section-head">
             <span class="eyebrow">Avis clients Google</span>
             <h2 class="section-title">Ils nous ont fait <em>confiance</em></h2>
-            <div class="reviews-summary" id="reviewsSummary" hidden>
-                <span class="reviews-stars" id="reviewsStars"></span>
-                <span class="reviews-avg" id="reviewsAvg"></span>
-                <span class="reviews-count" id="reviewsCount"></span>
-                <a class="reviews-google-link" id="reviewsGoogleLink" href="#" target="_blank" rel="noopener">
+            <div class="reviews-summary" id="reviewsSummary">
+                <span class="reviews-stars" id="reviewsStars">★★★★★</span>
+                <span class="reviews-avg" id="reviewsAvg">4,8</span>
+                <span class="reviews-count" id="reviewsCount">(11 avis)</span>
+                <a class="reviews-google-link" id="reviewsGoogleLink" href="https://www.google.com/maps?cid=4485953212700977186" target="_blank" rel="noopener">
                     Voir sur Google
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
                 </a>
@@ -596,30 +596,59 @@
         </div>
 
         <div class="reviews-grid" id="reviewsGrid">
-            <!-- Fallback : ces avis s'affichent si l'API Google n'est pas configurée -->
+            <!-- Avis réels extraits de la fiche Google / PagesJaunes.
+                 Remplacés automatiquement si l'API Google Places est configurée. -->
             <article class="review">
                 <div class="review-stars">★★★★★</div>
-                <p class="review-text">« Intervention rapide et pro. Le rendu de la pose est propre, les explications limpides. Je recommande pour toute installation clim dans le secteur. »</p>
-                <div class="review-author">
-                    <div class="review-avatar">M</div>
-                    <div><strong>Marc D.</strong><span>Ganges (34)</span></div>
-                </div>
-            </article>
-            <article class="review">
-                <div class="review-stars">★★★★★</div>
-                <p class="review-text">« Nous vivions en zone très isolée sans internet correct. Grâce à leur installation Starlink, tout fonctionne parfaitement. Un grand merci ! »</p>
+                <p class="review-text">« Ils ont installé notre satellite Starlink et ont transformé ce qui aurait pu être un travail difficile en une pure joie. Nous sommes très reconnaissants. »</p>
                 <div class="review-author">
                     <div class="review-avatar">S</div>
-                    <div><strong>Sophie L.</strong><span>Le Vigan (30)</span></div>
+                    <div><strong>Sarah W.</strong><span>Client Starlink</span></div>
                 </div>
             </article>
             <article class="review">
                 <div class="review-stars">★★★★★</div>
-                <p class="review-text">« Dépannage en urgence un samedi après-midi. Un vrai artisan à l'écoute, prix juste, et clim comme neuve. Bravo ! »</p>
+                <p class="review-text">« Travail très professionnel et délais rapides ! Les prix sont très abordables par rapport aux autres. »</p>
                 <div class="review-author">
-                    <div class="review-avatar">J</div>
-                    <div><strong>Julien R.</strong><span>Anduze (30)</span></div>
+                    <div class="review-avatar">C</div>
+                    <div><strong>Client vérifié</strong><span>Installation climatisation</span></div>
                 </div>
+            </article>
+            <article class="review">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">« Ponctuel, compétent et prix très attractifs. En plus il a pris le temps de me conseiller sur un sujet en dehors de ce pour quoi il venait. »</p>
+                <div class="review-author">
+                    <div class="review-avatar">C</div>
+                    <div><strong>Client vérifié</strong><span>PagesJaunes</span></div>
+                </div>
+            </article>
+            <article class="review">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">« Travail propre, soigné et de bons conseils. Rapide, efficace, compétent. »</p>
+                <div class="review-author">
+                    <div class="review-avatar">C</div>
+                    <div><strong>Client vérifié</strong><span>Avis Google</span></div>
+                </div>
+            </article>
+            <article class="review">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">« Très efficace, professionnel et agréable. »</p>
+                <div class="review-author">
+                    <div class="review-avatar">C</div>
+                    <div><strong>Client vérifié</strong><span>Février 2025</span></div>
+                </div>
+            </article>
+            <article class="review review-cta">
+                <div class="review-cta-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                </div>
+                <p class="review-cta-text">Découvrez les <strong>11 avis</strong> Google de nos clients — note moyenne <strong>4,8 / 5</strong>.</p>
+                <a href="https://www.google.com/maps?cid=4485953212700977186" target="_blank" rel="noopener" class="btn btn-primary">
+                    Tous les avis sur Google
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+                </a>
             </article>
         </div>
     </div>

@@ -370,6 +370,15 @@ h1,h2,h3,h4,h5,h6{font-family:'Space Grotesk','Inter',sans-serif;line-height:1.1
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .review .review-avatar img{width:100%;height:100%;object-fit:cover;display:block}
 img.review-avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0}
+
+.review-cta{background:linear-gradient(135deg,#0F172A 0%,#1E293B 100%);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:36px 28px;gap:18px;border:none;position:relative;overflow:hidden}
+.review-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 30% 20%,rgba(14,165,233,.25),transparent 60%);pointer-events:none}
+.review-cta::after{display:none}
+.review-cta-icon{width:56px;height:56px;border-radius:50%;background:var(--gradient-cool);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-glow);position:relative;z-index:1}
+.review-cta-icon svg{width:26px;height:26px;fill:currentColor}
+.review-cta-text{color:rgba(255,255,255,.85);font-size:15px;margin:0;line-height:1.6;position:relative;z-index:1}
+.review-cta-text strong{color:#fff;font-weight:600}
+.review-cta .btn{position:relative;z-index:1}
 .review{background:#fff;padding:30px;border-radius:var(--radius-lg);border:1px solid var(--line);transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden}
 .review:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--primary)}
 .review::before{content:'"';position:absolute;top:-20px;right:22px;font-family:'Space Grotesk',serif;font-size:100px;color:var(--primary);opacity:.12;line-height:1;pointer-events:none}
