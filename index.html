@@ -578,23 +578,31 @@
     </div>
 </section>
 
-<!-- ═══════════════ AVIS / TÉMOIGNAGES ═══════════════ -->
+<!-- ═══════════════ AVIS / TÉMOIGNAGES (Google) ═══════════════ -->
 <section id="avis" class="reviews">
     <div class="container">
         <div class="section-head">
-            <span class="eyebrow">Avis clients</span>
+            <span class="eyebrow">Avis clients Google</span>
             <h2 class="section-title">Ils nous ont fait <em>confiance</em></h2>
+            <div class="reviews-summary" id="reviewsSummary" hidden>
+                <span class="reviews-stars" id="reviewsStars"></span>
+                <span class="reviews-avg" id="reviewsAvg"></span>
+                <span class="reviews-count" id="reviewsCount"></span>
+                <a class="reviews-google-link" id="reviewsGoogleLink" href="#" target="_blank" rel="noopener">
+                    Voir sur Google
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
+                </a>
+            </div>
         </div>
-        <div class="reviews-grid">
+
+        <div class="reviews-grid" id="reviewsGrid">
+            <!-- Fallback : ces avis s'affichent si l'API Google n'est pas configurée -->
             <article class="review">
                 <div class="review-stars">★★★★★</div>
                 <p class="review-text">« Intervention rapide et pro. Le rendu de la pose est propre, les explications limpides. Je recommande pour toute installation clim dans le secteur. »</p>
                 <div class="review-author">
                     <div class="review-avatar">M</div>
-                    <div>
-                        <strong>Marc D.</strong>
-                        <span>Ganges (34)</span>
-                    </div>
+                    <div><strong>Marc D.</strong><span>Ganges (34)</span></div>
                 </div>
             </article>
             <article class="review">
@@ -602,10 +610,7 @@
                 <p class="review-text">« Nous vivions en zone très isolée sans internet correct. Grâce à leur installation Starlink, tout fonctionne parfaitement. Un grand merci ! »</p>
                 <div class="review-author">
                     <div class="review-avatar">S</div>
-                    <div>
-                        <strong>Sophie L.</strong>
-                        <span>Le Vigan (30)</span>
-                    </div>
+                    <div><strong>Sophie L.</strong><span>Le Vigan (30)</span></div>
                 </div>
             </article>
             <article class="review">
@@ -613,15 +618,22 @@
                 <p class="review-text">« Dépannage en urgence un samedi après-midi. Un vrai artisan à l'écoute, prix juste, et clim comme neuve. Bravo ! »</p>
                 <div class="review-author">
                     <div class="review-avatar">J</div>
-                    <div>
-                        <strong>Julien R.</strong>
-                        <span>Anduze (30)</span>
-                    </div>
+                    <div><strong>Julien R.</strong><span>Anduze (30)</span></div>
                 </div>
             </article>
         </div>
     </div>
 </section>
+
+<!-- ⚙️ CONFIG GOOGLE REVIEWS ⚙️
+     Remplace les deux valeurs ci-dessous par ta clé API Google Places et
+     ton Place ID pour afficher les vrais avis Google. Instructions dans le README. -->
+<script>
+    window.GOOGLE_REVIEWS_CONFIG = {
+        apiKey:  'REMPLACER_PAR_CLE_API_GOOGLE',
+        placeId: 'REMPLACER_PAR_PLACE_ID'
+    };
+</script>
 
 <!-- ═══════════════ FAQ ═══════════════ -->
 <section class="faq">

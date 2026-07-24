@@ -361,7 +361,15 @@ h1,h2,h3,h4,h5,h6{font-family:'Space Grotesk','Inter',sans-serif;line-height:1.1
 
 /* ═══════════════ REVIEWS ═══════════════ */
 .reviews{padding:100px 0;background:var(--bg)}
+.reviews-summary{display:inline-flex;align-items:center;gap:12px;margin-top:16px;padding:10px 18px;background:#fff;border:1px solid var(--line);border-radius:999px;box-shadow:var(--shadow-sm);flex-wrap:wrap;justify-content:center}
+.reviews-stars{color:#FBBF24;font-size:18px;letter-spacing:2px;line-height:1}
+.reviews-avg{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;color:var(--text-strong);line-height:1}
+.reviews-count{color:var(--muted);font-size:13.5px;font-weight:500}
+.reviews-google-link{display:inline-flex;align-items:center;gap:5px;color:var(--primary);font-size:13.5px;font-weight:600;padding-left:12px;border-left:1px solid var(--line);transition:color .2s}
+.reviews-google-link:hover{color:var(--primary-dark)}
 .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.review .review-avatar img{width:100%;height:100%;object-fit:cover;display:block}
+img.review-avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;flex-shrink:0}
 .review{background:#fff;padding:30px;border-radius:var(--radius-lg);border:1px solid var(--line);transition:transform .3s,box-shadow .3s,border-color .3s;position:relative;overflow:hidden}
 .review:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);border-color:var(--primary)}
 .review::before{content:'"';position:absolute;top:-20px;right:22px;font-family:'Space Grotesk',serif;font-size:100px;color:var(--primary);opacity:.12;line-height:1;pointer-events:none}

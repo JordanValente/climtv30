@@ -187,3 +187,96 @@ document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') showImage(currentIdx - 1);
     if (e.key === 'ArrowRight') showImage(currentIdx + 1);
 });
+
+// ═══════════════ Google Reviews (Places API — New) ═══════════════
+const gCfg = window.GOOGLE_REVIEWS_CONFIG || {};
+const gApiConfigured = gCfg.apiKey && gCfg.placeId
+    && !gCfg.apiKey.startsWith('REMPLACER')
+    && !gCfg.placeId.startsWith('REMPLACER');
+
+const buildStars = (rating) => {
+    const full = Math.round(rating);
+    return '★★★★★☆☆☆☆☆'.slice(5 - full, 10 - full);
+};
+
+const timeAgoFr = (date) => {
+    const diff = (Date.now() - new Date(date).getTime()) / 1000;
+    const day = 86400;
+    if (diff < day * 30) return `Il y a ${Math.max(1, Math.floor(diff / day))} j.`;
+    if (diff < day * 365) return `Il y a ${Math.floor(diff / (day * 30))} mois`;
+    const years = Math.floor(diff / (day * 365));
+    return `Il y a ${years} an${years > 1 ? 's' : ''}`;
+};
+
+const renderReviews = (data) => {
+    const grid = document.getElementById('reviewsGrid');
+    const summary = document.getElementById('reviewsSummary');
+    const starsEl = document.getElementById('reviewsStars');
+    const avgEl = document.getElementById('reviewsAvg');
+    const countEl = document.getElementById('reviewsCount');
+    const linkEl = document.getElementById('reviewsGoogleLink');
+
+    if (!grid || !data.reviews || !data.reviews.length) return;
+
+    if (typeof data.rating === 'number') {
+        starsEl.textContent = buildStars(data.rating);
+        avgEl.textContent = data.rating.toFixed(1);
+        countEl.textContent = `(${data.userRatingCount || data.reviews.length} avis)`;
+        if (data.googleMapsUri) linkEl.href = data.googleMapsUri;
+        summary.hidden = false;
+    }
+
+    grid.innerHTML = data.reviews.slice(0, 6).map(r => {
+        const name = (r.authorAttribution && r.authorAttribution.displayName) || 'Client';
+        const photo = r.authorAttribution && r.authorAttribution.photoUri;
+        const initial = name.charAt(0).toUpperCase();
+        const text = (r.originalText && r.originalText.text) || (r.text && r.text.text) || '';
+        const stars = buildStars(r.rating || 5);
+        const when = r.publishTime ? timeAgoFr(r.publishTime) : '';
+        const avatar = photo
+            ? `<img class="review-avatar" src="${photo}" alt="${name}" referrerpolicy="no-referrer">`
+            : `<div class="review-avatar">${initial}</div>`;
+        return `
+            <article class="review reveal in">
+                <div class="review-stars">${stars}</div>
+                <p class="review-text">« ${text.replace(/</g, '&lt;')} »</p>
+                <div class="review-author">
+                    ${avatar}
+                    <div><strong>${name}</strong><span>${when}</span></div>
+                </div>
+            </article>`;
+    }).join('');
+};
+
+const loadGoogleReviews = async () => {
+    if (!gApiConfigured) return;
+    try {
+        const res = await fetch(
+            `https://places.googleapis.com/v1/places/${encodeURIComponent(gCfg.placeId)}?languageCode=fr`,
+            {
+                headers: {
+                    'X-Goog-Api-Key': gCfg.apiKey,
+                    'X-Goog-FieldMask': 'displayName,rating,userRatingCount,reviews,googleMapsUri'
+                }
+            }
+        );
+        if (!res.ok) throw new Error(`API ${res.status}`);
+        const data = await res.json();
+        renderReviews(data);
+    } catch (err) {
+        console.warn('Google Reviews non chargés :', err.message);
+        // Les avis fallback restent affichés
+    }
+};
+
+// Chargement paresseux : on n'appelle l'API qu'à l'approche de la section
+if (gApiConfigured) {
+    const reviewsSection = document.getElementById('avis');
+    const reviewsObserver = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+            loadGoogleReviews();
+            reviewsObserver.disconnect();
+        }
+    }, { rootMargin: '200px' });
+    if (reviewsSection) reviewsObserver.observe(reviewsSection);
+}
