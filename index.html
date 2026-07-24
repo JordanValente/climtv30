@@ -10,7 +10,7 @@
     <meta property="og:title" content="CLIM & TV30 — Spécialiste climatisation, antenniste & internet">
     <meta property="og:description" content="10 ans d'expertise · Certifié CAT1 · Garantie décennale · Gard & Hérault">
     <meta property="og:type" content="website">
-    <link rel="icon" type="image/jpeg" href="images/logo.jpg">
+    <link rel="icon" type="image/png" href="images/logo/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -22,11 +22,7 @@
 <header class="nav" id="nav">
     <div class="nav-container">
         <a href="#accueil" class="nav-logo">
-            <div class="logo-badge">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M2 12h20M12 2v20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/>
-                </svg>
-            </div>
+            <img class="logo-img" src="images/logo/logo.png" alt="CLIM & TV30">
             <div class="logo-text">
                 <span class="logo-main">CLIM<em>&</em>TV30</span>
                 <span class="logo-sub">Saint-Hippolyte-du-Fort</span>
@@ -35,7 +31,6 @@
         <nav class="nav-menu" id="navMenu">
             <a href="#accueil">Accueil</a>
             <a href="#services">Services</a>
-            <a href="#modeles">Modèles</a>
             <a href="#chantiers">Chantiers</a>
             <a href="#zones">Zones</a>
             <a href="#avis">Avis</a>
@@ -181,7 +176,7 @@
                         <li>Marques premium : Daikin, Mitsubishi, Panasonic…</li>
                         <li>Certification CAT1 obligatoire</li>
                     </ul>
-                    <a href="#contact" class="service-link">Demander une étude
+                    <a href="installation.html" class="service-link">En savoir plus
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
                     </a>
                 </div>
@@ -205,6 +200,9 @@
                         <li>Réparation moteur & carte électronique</li>
                         <li>Intervention rapide</li>
                     </ul>
+                    <a href="depannage.html" class="service-link">En savoir plus
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
                 </div>
             </article>
 
@@ -224,6 +222,9 @@
                         <li>Vidage drain & contrôle électrique</li>
                         <li>Contrats d'entretien annuels</li>
                     </ul>
+                    <a href="entretien.html" class="service-link">En savoir plus
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
                 </div>
             </article>
 
@@ -242,6 +243,9 @@
                         <li>Réception après tempête / foudre</li>
                         <li>Installation de téléviseur mural</li>
                     </ul>
+                    <a href="antenniste.html" class="service-link">En savoir plus
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
                 </div>
             </article>
 
@@ -261,6 +265,9 @@
                         <li>Installation Starlink & satellite</li>
                         <li>Orientation optimale du signal</li>
                     </ul>
+                    <a href="internet.html" class="service-link">En savoir plus
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                    </a>
                 </div>
             </article>
 
@@ -321,122 +328,6 @@
                 <div class="metric-num" data-count="10">10 ans</div>
                 <div class="metric-label">Garantie décennale</div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- ═══════════════ MODÈLES / RÉALISATIONS ═══════════════ -->
-<section id="modeles" class="models">
-    <div class="container">
-        <div class="section-head">
-            <span class="eyebrow">Nos modèles & réalisations</span>
-            <h2 class="section-title">Une gamme <em>complète</em> pour tous les intérieurs</h2>
-            <p class="section-lead">Blanc, noir, gris, beige ou rouge : plus de 12 modèles disponibles pour s'adapter à tous les styles. Survolez chaque carte pour voir le rendu une fois installé.</p>
-        </div>
-
-        <div class="models-tabs" id="modelsTabs">
-            <button class="model-tab active" data-filter="all">Tous</button>
-            <button class="model-tab" data-filter="blanc">Blanc</button>
-            <button class="model-tab" data-filter="noir">Noir</button>
-            <button class="model-tab" data-filter="couleur">Couleurs</button>
-        </div>
-
-        <div class="models-grid">
-            <article class="model-card" data-cat="blanc">
-                <div class="model-flip">
-                    <img class="model-front" src="images/models/ay-installee.webp" alt="AY installée" loading="lazy">
-                    <img class="model-back" src="images/models/ay-produit.webp" alt="AY produit" loading="lazy">
-                </div>
-                <div class="model-info"><span class="model-name">AY</span><span class="model-color">Blanc</span></div>
-            </article>
-
-            <article class="model-card" data-cat="blanc">
-                <div class="model-flip">
-                    <img class="model-front" src="images/models/ef-blanc-installee.webp" alt="EF Blanc installée" loading="lazy">
-                    <img class="model-back" src="images/models/ef-blanc-produit.webp" alt="EF Blanc produit" loading="lazy">
-                </div>
-                <div class="model-info"><span class="model-name">EF</span><span class="model-color">Blanc</span></div>
-            </article>
-
-            <article class="model-card" data-cat="noir">
-                <div class="model-flip">
-                    <img class="model-front" src="images/models/ef-noir-installee.jpg" alt="EF Noir installée" loading="lazy">
-                    <img class="model-back" src="images/models/ef-noir-produit.webp" alt="EF Noir produit" loading="lazy">
-                </div>
-                <div class="model-info"><span class="model-name">EF</span><span class="model-color">Noir</span></div>
-            </article>
-
-            <article class="model-card" data-cat="couleur">
-                <div class="model-flip">
-                    <img class="model-front" src="images/models/ef-gris-installee.jpg" alt="EF Gris installée" loading="lazy">
-                    <img class="model-back" src="images/models/ef-gris-produit.webp" alt="EF Gris produit" loading="lazy">
-                </div>
-                <div class="model-info"><span class="model-name">EF</span><span class="model-color">Gris</span></div>
-            </article>
-
-            <article class="model-card" data-cat="blanc">
-                <div class="model-flip">
-                    <img class="model-front" src="images/models/ft-installee.jpg" alt="FT installée" loading="lazy">
-                    <img class="model-back" src="images/models/ft-produit.webp" alt="FT produit" loading="lazy">
-                </div>
-                <div class="model-info"><span class="model-name">FT</span><span class="model-color">Blanc</span></div>
-            </article>
-
-            <article class="model-card" data-cat="blanc">
-                <div class="model-flip">
-                    <img class="model-front" src="images/models/hr-installee.jpg" alt="HR installée" loading="lazy">
-                    <img class="model-back" src="images/models/hr-produit.webp" alt="HR produit" loading="lazy">
-                </div>
-                <div class="model-info"><span class="model-name">HR</span><span class="model-color">Blanc</span></div>
-            </article>
-
-            <article class="model-card" data-cat="blanc">
-                <div class="model-flip">
-                    <img class="model-front" src="images/models/kt-produit.webp" alt="KT" loading="lazy">
-                    <img class="model-back" src="images/models/kt-produit.webp" alt="KT" loading="lazy">
-                </div>
-                <div class="model-info"><span class="model-name">KT</span><span class="model-color">Blanc</span></div>
-            </article>
-
-            <article class="model-card" data-cat="blanc">
-                <div class="model-flip">
-                    <img class="model-front" src="images/models/ln-blanc-installee.jpg" alt="LN Blanc installée" loading="lazy">
-                    <img class="model-back" src="images/models/ln-blanc-produit.webp" alt="LN Blanc produit" loading="lazy">
-                </div>
-                <div class="model-info"><span class="model-name">LN</span><span class="model-color">Blanc</span></div>
-            </article>
-
-            <article class="model-card" data-cat="noir">
-                <div class="model-flip">
-                    <img class="model-front" src="images/models/ln-noir-installee.jpg" alt="LN Noir installée" loading="lazy">
-                    <img class="model-back" src="images/models/ln-noir-produit.webp" alt="LN Noir produit" loading="lazy">
-                </div>
-                <div class="model-info"><span class="model-name">LN</span><span class="model-color">Noir</span></div>
-            </article>
-
-            <article class="model-card" data-cat="couleur">
-                <div class="model-flip">
-                    <img class="model-front" src="images/models/ln-beige-installee.jpg" alt="LN Beige installée" loading="lazy">
-                    <img class="model-back" src="images/models/ln-beige-produit.webp" alt="LN Beige produit" loading="lazy">
-                </div>
-                <div class="model-info"><span class="model-name">LN</span><span class="model-color">Beige</span></div>
-            </article>
-
-            <article class="model-card" data-cat="couleur">
-                <div class="model-flip">
-                    <img class="model-front" src="images/models/ln-rouge-installee.jpg" alt="LN Rouge installée" loading="lazy">
-                    <img class="model-back" src="images/models/ln-rouge-produit.webp" alt="LN Rouge produit" loading="lazy">
-                </div>
-                <div class="model-info"><span class="model-name">LN</span><span class="model-color">Rouge</span></div>
-            </article>
-
-            <article class="model-card" data-cat="blanc">
-                <div class="model-flip">
-                    <img class="model-front" src="images/models/rw-installee.jpg" alt="RW installée" loading="lazy">
-                    <img class="model-back" src="images/models/rw-produit.webp" alt="RW produit" loading="lazy">
-                </div>
-                <div class="model-info"><span class="model-name">RW</span><span class="model-color">Blanc</span></div>
-            </article>
         </div>
     </div>
 </section>
@@ -586,8 +477,8 @@
             <h2 class="section-title">Ils nous ont fait <em>confiance</em></h2>
             <div class="reviews-summary" id="reviewsSummary">
                 <span class="reviews-stars" id="reviewsStars">★★★★★</span>
-                <span class="reviews-avg" id="reviewsAvg">4,8</span>
-                <span class="reviews-count" id="reviewsCount">(11 avis)</span>
+                <span class="reviews-avg" id="reviewsAvg">5,0</span>
+                <span class="reviews-count" id="reviewsCount">(139 avis)</span>
                 <a class="reviews-google-link" id="reviewsGoogleLink" href="https://www.google.com/maps?cid=4485953212700977186" target="_blank" rel="noopener">
                     Voir sur Google
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
@@ -644,7 +535,7 @@
                         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
                     </svg>
                 </div>
-                <p class="review-cta-text">Découvrez les <strong>11 avis</strong> Google de nos clients — note moyenne <strong>4,8 / 5</strong>.</p>
+                <p class="review-cta-text">Découvrez les <strong>139 avis</strong> Google de nos clients — note moyenne <strong>5 / 5</strong>.</p>
                 <a href="https://www.google.com/maps?cid=4485953212700977186" target="_blank" rel="noopener" class="btn btn-primary">
                     Tous les avis sur Google
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M7 17L17 7M8 7h9v9"/></svg>
@@ -835,9 +726,7 @@
         <div class="footer-top">
             <div class="footer-brand">
                 <div class="nav-logo">
-                    <div class="logo-badge">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 12h20M12 2v20M4.93 4.93l14.14 14.14M19.07 4.93L4.93 19.07"/></svg>
-                    </div>
+                    <img class="logo-img" src="images/logo/logo.png" alt="CLIM & TV30">
                     <div class="logo-text">
                         <span class="logo-main">CLIM<em>&</em>TV30</span>
                         <span class="logo-sub">Confort & connexion</span>
@@ -849,11 +738,11 @@
             <div class="footer-col">
                 <h4>Services</h4>
                 <ul>
-                    <li><a href="#services">Installation climatisation</a></li>
-                    <li><a href="#services">Dépannage</a></li>
-                    <li><a href="#services">Entretien</a></li>
-                    <li><a href="#services">Antenniste TV</a></li>
-                    <li><a href="#services">Internet zone isolée</a></li>
+                    <li><a href="installation.html">Installation climatisation</a></li>
+                    <li><a href="depannage.html">Dépannage</a></li>
+                    <li><a href="entretien.html">Entretien</a></li>
+                    <li><a href="antenniste.html">Antenniste TV</a></li>
+                    <li><a href="internet.html">Internet zone isolée</a></li>
                 </ul>
             </div>
 

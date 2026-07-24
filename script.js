@@ -50,7 +50,7 @@ revealItems.forEach(el => io.observe(el));
 const form = document.getElementById('contactForm');
 const success = document.getElementById('formSuccess');
 
-form.addEventListener('submit', (e) => {
+if (form) form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     const data = {
@@ -125,22 +125,6 @@ if (heroVisual && window.matchMedia('(min-width: 960px)').matches) {
     }, { passive: true });
 }
 
-// ═══════════════ Filtres modèles ═══════════════
-const modelTabs = document.querySelectorAll('.model-tab');
-const modelCards = document.querySelectorAll('.model-card');
-
-modelTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        const filter = tab.dataset.filter;
-        modelTabs.forEach(t => t.classList.remove('active'));
-        tab.classList.add('active');
-        modelCards.forEach(card => {
-            const matches = filter === 'all' || card.dataset.cat === filter;
-            card.classList.toggle('hidden', !matches);
-        });
-    });
-});
-
 // ═══════════════ Lightbox pour les chantiers ═══════════════
 const chantierImgs = Array.from(document.querySelectorAll('.chantier-item img'));
 const lightbox = document.getElementById('lightbox');
@@ -182,7 +166,7 @@ if (lbNext) lbNext.addEventListener('click', () => showImage(currentIdx + 1));
 if (lightbox) lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 
 document.addEventListener('keydown', (e) => {
-    if (!lightbox.classList.contains('open')) return;
+    if (!lightbox || !lightbox.classList.contains('open')) return;
     if (e.key === 'Escape') closeLightbox();
     if (e.key === 'ArrowLeft') showImage(currentIdx - 1);
     if (e.key === 'ArrowRight') showImage(currentIdx + 1);
